@@ -19,12 +19,26 @@ const data = await res.json();
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-         
+          {data.map((item) => (
+            <div key={item.id} className="bg-[#12161f] border border-gray-800/80 rounded-2xl p-6 flex flex-col items-center gap-4 transition-transform duration-200 hover:scale-105">
+              <img src={item.image} alt={item.title} className="w-full h-48 object-cover rounded-lg" />
+              <h2 className="text-xl font-bold text-white">{item.title}</h2>
+              <p className="text-gray-400 text-sm">{item.description}</p>
+              
+            </div>
+          ))}
         </div>
       </div>
     </main>
- </div>
 
+
+
+
+
+
+
+    
+ </div>
 
 
 

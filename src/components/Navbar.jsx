@@ -1,3 +1,4 @@
+
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -25,31 +26,38 @@ export default function Navbar() {
           >
             Workouts
           </Link>
+
+
           <Link 
             href="/my-plan" 
             className="text-gray-400 hover:text-white font-medium px-5 py-1.5 rounded-full text-sm transition"
           >
             My Plan
           </Link>
+
         </nav>
 
-        <div className="flex items-center gap-6">
-          <button className="flex items-center gap-2 text-gray-300 text-sm font-medium hover:text-white transition cursor-pointer"
-          >
-            <span>Plan</span>
-            <span className="bg-[#ccff00] text-black font-bold text-xs w-5 h-5 rounded-full flex items-center justify-center">
-            </span>
-          </button>
+      <div className="flex items-center gap-6">
+  <Link 
+    href="/my-plan"
+    className="flex items-center gap-2 text-gray-300 text-sm font-medium hover:text-white transition cursor-pointer"
+  >
+    <span>Plan</span>
+    <span className="bg-[#ccff00] text-black font-bold text-xs min-w-7 h-7 px-2 rounded-full flex items-center justify-center">
+      100
+    </span>
+  </Link>
 
-          <button
-            className="flex items-center gap-2 text-gray-300 text-sm font-medium hover:text-white transition cursor-pointer"
-          >
-            <span>Saved</span>
-            <span className="border border-gray-700 text-gray-300 font-bold text-xs w-5 h-5 rounded-full flex items-center justify-center">
-              
-            </span>
-          </button>
-        </div>
+  <Link
+    href="/saved"
+    className="flex items-center gap-2 text-gray-300 text-sm font-medium hover:text-white transition cursor-pointer"
+  >
+    <span>Saved</span>
+    <span className="border border-gray-700 text-gray-300 font-bold text-xs min-w-7 h-7 px-2 rounded-full flex items-center justify-center">
+      100
+    </span>
+  </Link>
+</div>
 
       </div>
     </header>

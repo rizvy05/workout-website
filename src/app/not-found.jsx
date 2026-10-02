@@ -15,13 +15,12 @@ export default function NotFound() {
         <h1 className="text-8xl sm:text-9xl font-black leading-none tracking-tighter mb-4 text-transparent bg-clip-text bg-linear-to-r from-lime-400 via-emerald-400 to-lime-500">
           404
         </h1>
-
         <h2 className="text-xl sm:text-2xl font-extrabold uppercase tracking-widest text-white mb-3">
           Page Not Found
         </h2>
 
    <p className="text-gray-400 text-sm sm:text-base mb-8 max-w-md leading-relaxed">
-  The page you are looking for doesn&apos;t exist, has been removed, or is temporarily unavailable.
+  The page you are looking for does not exist, has been removed, or is temporarily unavailable.
 </p>
 
         <Link

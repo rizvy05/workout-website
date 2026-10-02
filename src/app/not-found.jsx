@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function NotFound() {
   return (
     <div className="relative min-h-screen w-full bg-[#0b0f17] text-white flex flex-col items-center justify-center p-6 text-center antialiased overflow-hidden font-sans">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-lime-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-87.5 sm:w-125 h-87.5 sm:h-125 bg-lime-500/10 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="relative z-10 max-w-xl w-full flex flex-col items-center">
         <div className="mb-6 p-4 rounded-full bg-[#121824] border border-gray-800 shadow-xl">
@@ -12,7 +12,7 @@ export default function NotFound() {
           </svg>
         </div>
 
-        <h1 className="text-8xl sm:text-9xl font-black leading-none tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-lime-400 via-emerald-400 to-lime-500">
+        <h1 className="text-8xl sm:text-9xl font-black leading-none tracking-tighter mb-4 text-transparent bg-clip-text bg-linear-to-r from-lime-400 via-emerald-400 to-lime-500">
           404
         </h1>
 
@@ -20,9 +20,9 @@ export default function NotFound() {
           Page Not Found
         </h2>
 
-        <p className="text-gray-400 text-sm sm:text-base mb-8 max-w-md leading-relaxed">
-          The page you are looking for doesn't exist, has been removed, or is temporarily unavailable.
-        </p>
+   <p className="text-gray-400 text-sm sm:text-base mb-8 max-w-md leading-relaxed">
+  The page you are looking for doesn&apos;t exist, has been removed, or is temporarily unavailable.
+</p>
 
         <Link
           href="/"

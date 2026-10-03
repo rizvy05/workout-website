@@ -3,11 +3,11 @@ import Link from 'next/link';
 export default function NotFound() {
   return (
     <div className="relative min-h-screen w-full bg-[#0b0f17] text-white flex flex-col items-center justify-center p-6 text-center antialiased overflow-hidden font-sans">
-      {/* Background Glow */}
+     
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 sm:w-96 h-80 sm:h-96 bg-lime-500/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 max-w-xl w-full flex flex-col items-center">
-        {/* Warning Icon Badge */}
+     
         <div className="mb-6 p-4 rounded-full bg-[#121824] border border-gray-800 shadow-xl">
           <svg
             className="w-8 h-8 text-[#ccff00]"
@@ -25,7 +25,6 @@ export default function NotFound() {
           </svg>
         </div>
 
-        {/* 404 Header */}
         <h1 className="text-8xl sm:text-9xl font-black leading-none tracking-tighter mb-4 text-transparent bg-clip-text bg-linear-to-r from-lime-400 via-emerald-400 to-lime-500">
           404
         </h1>
@@ -38,7 +37,6 @@ export default function NotFound() {
           The page you are looking for does not exist, has been removed, or is temporarily unavailable.
         </p>
 
-        {/* Return Home Button */}
         <Link
           href="/"
           className="group inline-flex items-center gap-2 bg-[#ccff00] text-black font-bold uppercase tracking-wide text-xs sm:text-sm px-8 py-3.5 rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg shadow-lime-900/20"

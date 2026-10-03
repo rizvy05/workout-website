@@ -2,17 +2,20 @@
 import { LuCalendarPlus } from 'react-icons/lu';
 import React, { useContext } from 'react';
 import { WorkoutContext } from '@/context/WorkoutProvider';
-import { toast } from 'react-toastify'; // Ensure toast is imported
+import { toast } from 'react-toastify';
 
 const MyPlanWorkout = ({ cardDetails }) => {
-  const { workouts, setWorkouts } = useContext(WorkoutContext);
+  const { addToMyPlan } = useContext(WorkoutContext);
 
   const handleAddToPlan = () => {
-    console.log('Add to todays plan button clicked', cardDetails);
+    if (!addToMyPlan) {
+      console.error('addToMyPlan is missing from context');
+      return;
+    }
 
-    setWorkouts((prevWorkouts) => [...prevWorkouts, cardDetails]);
-
-    toast.success(`${cardDetails?.title || 'Workout'} added to todays plan!`, {
+    addToMyPlan(cardDetails);
+    
+    toast.success(`${cardDetails?.name || cardDetails?.title || 'Workout'} added to today's plan!`, {
       position: 'top-right',
       autoClose: 3000,
     });
@@ -30,6 +33,39 @@ const MyPlanWorkout = ({ cardDetails }) => {
 };
 
 export default MyPlanWorkout;
+
+// 'use client';
+// import { LuCalendarPlus } from 'react-icons/lu';
+// import React, { useContext } from 'react';
+// import { WorkoutContext } from '@/context/WorkoutProvider';
+// import { toast } from 'react-toastify'; // Ensure toast is imported
+
+// const MyPlanWorkout = ({ cardDetails }) => {
+//   const { workouts, setWorkouts } = useContext(WorkoutContext);
+
+//   const handleAddToPlan = () => {
+//     console.log('Add to todays plan button clicked', cardDetails);
+
+//     setWorkouts((prevWorkouts) => [...prevWorkouts, cardDetails]);
+
+//     toast.success(`${cardDetails?.title || 'Workout'} added to todays plan!`, {
+//       position: 'top-right',
+//       autoClose: 3000,
+//     });
+//   };
+
+//   return (
+//     <button 
+//       onClick={handleAddToPlan}
+//       className="bg-[#ccff00] hover:bg-[#b8e600] text-black font-extrabold text-xs px-5 py-3 rounded-xl flex items-center gap-2 transition-colors cursor-pointer"
+//     >    
+//       <LuCalendarPlus className="text-base" />
+//       <span>Add to todays plan</span>
+//     </button>
+//   );
+// };
+
+// export default MyPlanWorkout;
 
 // 'use client';
 // import { LuCalendarPlus } from 'react-icons/lu';

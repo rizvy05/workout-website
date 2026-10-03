@@ -17,7 +17,7 @@ export default function Hero() {
 
           <p className="text-gray-400  text-base md:text-lg max-w-lg mt-2">
            FitLog is a dark, no-nonsense gym companion: pick a lift, lock it
-into today's plan, and watch the week's work add up.</p>
+into todays plan, and watch the weeks work add up.</p>
 <a 
             href="#library" 
             className="mt-4 bg-[#ccff00] text-black font-bold px-6 py-3.5 rounded-lg text-sm tracking-wide uppercase hover:bg-[#b8e600] transition"

@@ -1,4 +1,3 @@
-
 export default async function GetData() {
   const res = await fetch('http://localhost:3000/data.json', {
     cache: 'no-store',

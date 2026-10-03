@@ -1,4 +1,3 @@
-
 import Hero from '../components/Hero';
 import Workouts from './workouts/page.jsx';
 export default function Home() {

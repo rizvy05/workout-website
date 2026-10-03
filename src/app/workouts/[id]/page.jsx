@@ -1,8 +1,8 @@
     import React from 'react';
     import Image from 'next/image';
     import GetData from '@/lib/GetData';
-    import { LuCalendarPlus, LuBookmark } from 'react-icons/lu';
-
+import MyPlanWorkout from '@/components/workout/MyPlanWorkout';
+import SavedWorkout from '@/components/workout/SavedWorkout';
     const CardDetails = async ({ params }) => {
     const { id } = await params;
     const allDetails = await GetData();
@@ -113,15 +113,8 @@
 
    
     <div className="flex items-center gap-4 pt-2">
-    <button className="bg-[#ccff00] hover:bg-[#b8e600] text-black font-extrabold text-xs px-5 py-3 rounded-xl flex items-center gap-2 transition-colors cursor-pointer">
-        <LuCalendarPlus className="text-base" />
-        <span>Add to todays plan</span>
-    </button>
-
-    <button className="border border-gray-800 hover:bg-gray-900 text-gray-300 font-bold text-xs px-5 py-3 rounded-xl flex items-center gap-2 transition-colors cursor-pointer">
-        <LuBookmark className="text-base text-gray-400" />
-        <span>Save for later</span>
-    </button>
+        <MyPlanWorkout cardDetails={cardDetails} />
+        <SavedWorkout cardDetails={cardDetails} />
     </div>
     </div>
 
